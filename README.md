@@ -10,7 +10,7 @@ tar cjf {database}.tgz {database}.dump ~/.local/share/Odoo/filestore/{database}
 
 **Restoring a backup in a new database**
 ```{sql}
-CREATE DATABASE {database} WITH OWNER odoo TEMPLATE template1;
+CREATE DATABASE {database} WITH OWNER='odoo' TEMPLATE='template1' ENCODING='UTF8';
 ```
 ```{shell}
 tar xf {database}.tgz
