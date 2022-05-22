@@ -1,8 +1,8 @@
 # Odoo tips
 
-## Content :clipboard:
+**Content** :clipboard:
 
-- :bar_chat: [Database](./database)
+- :bar_chart: [Database](./database)
 - :wrench: [Config params](./config_params)
 - :rocket: [Deploy](./deploy)
 - :microscope: [Tests](./tests)
