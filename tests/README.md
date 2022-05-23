@@ -90,38 +90,51 @@ from odoo.tests import common
 
 
 class TestFoo(common.TransactionCase):
-    def test_foo_assert_equal(self):
+    def test_assert_equal(self):
         result = self.function_to_test()
         expected = ...  # expected result
         self.assertEqual(result, expected)
 
-    def test_foo_assert_not_equal(self):
+    def test_assert_not_equal(self):
         result = self.function_to_test()
         not_expected = ...  # not expected result
         self.assertNotEqual(result, not_expected)
 
-    def test_foo_assert_true(self):
+    def test_assert_true(self):
         result = self.function_to_test()
         self.assertTrue(result)
 
-    def test_foo_assert_false(self):
+    def test_assert_false(self):
         result = self.function_to_test()
         self.assertFalse(result)
 
-    def test_foo_assert_in(self):
+    def test_assert_in(self):
         result = self.function_to_test()
         expected_values = ...  # expected values
         self.assertIn(result, expected_values)
 
-    def test_foo_assert_not_in(self):
+    def test_assert_not_in(self):
         result = self.function_to_test()
         not_expected_values = ...
         self.assertIn(result, not_expected_values)
 
-    def test_foo_assert_raises(self):
+    def test_assert_raises(self):
         with self.assertRaises(exceptions.UserError) as e:
             self.function_to_test()  # this function must be to raise an exception
             # in addition, is possible assert the error message
             expected_error = ...
             self.assertEqual(e.name, expected_error)
+
+    def test_assert_is_none(self):
+        result = self.function_to_test()
+        self.assertIsNone(result)
+
+    def test_assert_is_not_none(self):
+        result = self.function_to_test()
+        self.assertIsNotNone(result)
+
+    def test_assert_is_instance(self):
+        result = self.function_to_test()
+        expected_instance = ...
+        self.assertIsInstance(result, expected_instance)
 ```
