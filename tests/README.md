@@ -116,7 +116,7 @@ class TestFoo(common.TransactionCase):
     def test_assert_not_in(self):
         result = self.function_to_test()
         not_expected_values = ...
-        self.assertIn(result, not_expected_values)
+        self.assertNotIn(result, not_expected_values)
 
     def test_assert_raises(self):
         with self.assertRaises(exceptions.UserError) as e:
