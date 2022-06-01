@@ -6,6 +6,7 @@
 - **_description**: User friendly title to the model.
 - **_order**: Sort records by fields.
 - **_rec_name**: Record representation.
+- **_log_access**: If is False, both create and write audit logs will not be filled
 
 ```python
 from odoo import fields, models
@@ -15,7 +16,7 @@ class MyFoo(models.Model):
     _description = "My Foo"
     _order = "release_date desc, title"
     _rec_name = "title"
-    _log_access = True  # is True by default. If False, create and write audit logs will not be generated
+    _log_access = True  # True by default
 
     name = fields.Char("Name", required=True)  # by default will be used to represent a record of this model
     title = fields.Char("Title", required=True)
